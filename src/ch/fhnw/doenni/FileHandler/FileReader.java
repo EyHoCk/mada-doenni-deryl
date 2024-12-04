@@ -1,4 +1,4 @@
-package ch.fhnw.doenni.Huffmann.FileHandler;
+package ch.fhnw.doenni.FileHandler;
 
 
 import java.io.File;
@@ -37,34 +37,3 @@ public class FileReader {
 
 }
 
-
-
-
-//    public Map<Character, Integer> SimbolCount() throws IOException {
-//
-//        Map<Character, Integer> tabel = new HashMap<Character, Integer>();
-//
-//        Path dateiPfad = Paths.get("src/main/java/org/Huffmann/Text.txt");
-//
-//        InputStream in = new FileInputStream(String.valueOf(dateiPfad));
-//        InputStreamReader reader = new InputStreamReader(in);
-//        BufferedReader buffered = new BufferedReader(reader);
-//        String line = buffered.readLine();
-//
-//        for (char c: line.toCharArray() ) {
-//
-//            if (!tabel.containsKey(c)) {
-//                tabel.put(c, 1);
-//            } else {
-//                tabel.put(c, tabel.get(c) + 1);
-//            }
-//        }
-//
-//        System.out.println(tabel);
-//
-//        return tabel;
-//    }
-//
-//
-//
-//}

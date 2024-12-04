@@ -1,4 +1,4 @@
-package ch.fhnw.doenni.Huffmann.FileHandler;
+package ch.fhnw.doenni.FileHandler;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,19 +16,6 @@ public class FileWriter {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    public static String readFile(String filePath) {
-        StringBuilder fileString = new StringBuilder();
-        File file = new File(filePath);
-        try (Scanner scanner = new Scanner(file)) {
-            while (scanner.hasNextLine()) {
-                fileString.append(scanner.nextLine());
-            }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-        return fileString.toString();
     }
 
     public static void writeByteArray(String filePath, byte[] byteArray) {
