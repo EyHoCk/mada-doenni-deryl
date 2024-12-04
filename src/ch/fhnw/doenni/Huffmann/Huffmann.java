@@ -1,6 +1,6 @@
-package ch.fhnw.doenni;
+package ch.fhnw.doenni.Huffmann;
 
-public class Main {
+public class Huffmann {
     public static void main(String[] args) {
         System.out.println("Hello world!");
     }
