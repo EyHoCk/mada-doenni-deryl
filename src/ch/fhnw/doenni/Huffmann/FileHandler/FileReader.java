@@ -1,4 +1,4 @@
-package ch.fhnw.doenni.FileHandler;
+package ch.fhnw.doenni.Huffmann.FileHandler;
 
 
 import java.io.File;
