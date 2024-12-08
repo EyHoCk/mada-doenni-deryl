@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class Huffmann {
     public static void main(String[] args) {
-        String filename = "R:\\documents\\mada2\\mada-doenni-deryl\\src\\ch\\fhnw\\doenni\\Huffmann\\test.txt";
+        String filename = "test.txt";
         int[] asciiCount = new int[128]; 
         ArrayList<Leaf> leaves = new ArrayList<>();
 
@@ -54,7 +54,7 @@ public class Huffmann {
         }
 
         // Huffman-Codierungstabelle speichern
-        try (FileWriter writer = new FileWriter("R:\\documents\\mada2\\mada-doenni-deryl\\src\\ch\\fhnw\\doenni\\Huffmann\\tabelle.txt")) {
+        try (FileWriter writer = new FileWriter("tabelle.txt")) {
             for (Map.Entry<Integer, String> entry : huffmanCodes.entrySet()) {
                 writer.write(entry.getKey() + ":" + entry.getValue() + "-");
             }
@@ -90,7 +90,7 @@ public class Huffmann {
         }
 
         // Byte-Array speichern
-        try (FileOutputStream fos = new FileOutputStream("R:\\documents\\mada2\\mada-doenni-deryl\\src\\ch\\fhnw\\doenni\\Huffmann\\output.dat")) {
+        try (FileOutputStream fos = new FileOutputStream("output.dat")) {
             fos.write(byteArray);
         } catch (IOException e) {
             e.printStackTrace();
@@ -114,7 +114,7 @@ public class Huffmann {
     private static void decode() {
         // Kodierungstabelle einlesen
         Map<String, Integer> huffmanCodes = new HashMap<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader("R:\\documents\\mada2\\mada-doenni-deryl\\src\\ch\\fhnw\\doenni\\Huffmann\\tabelle.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("tabelle.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] entries = line.split("-");
@@ -130,7 +130,7 @@ public class Huffmann {
         }
 
         // Byte-Array einlesen
-        File file = new File("R:\\documents\\mada2\\mada-doenni-deryl\\src\\ch\\fhnw\\doenni\\Huffmann\\output.dat");
+        File file = new File("output.dat");
         byte[] bFile = new byte[(int) file.length()];
         try (FileInputStream fis = new FileInputStream(file)) {
             fis.read(bFile);
@@ -160,7 +160,7 @@ public class Huffmann {
         }
 
         // Dekodierten Text speichern
-        try (FileWriter writer = new FileWriter("R:\\documents\\mada2\\mada-doenni-deryl\\src\\ch\\fhnw\\doenni\\Huffmann\\decompress.txt")) {
+        try (FileWriter writer = new FileWriter("decompress.txt")) {
             writer.write(decodedText.toString());
         } catch (IOException e) {
             e.printStackTrace();
