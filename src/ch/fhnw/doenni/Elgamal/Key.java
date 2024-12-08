@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Key {
 
-        private BigInteger group;
+    private BigInteger group;
     private BigInteger generator;
     private BigInteger number;
 
@@ -43,6 +43,5 @@ public class Key {
         Random rnd = new Random();
         return new BigInteger(group.subtract(new BigInteger("1")).bitLength(), rnd);
     }
-
 
 }
