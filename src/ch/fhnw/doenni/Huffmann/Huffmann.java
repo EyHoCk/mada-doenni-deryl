@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class Huffmann {
     public static void main(String[] args) {
-        String filename = "test.txt";
+        String filename = "src/ch/fhnw/doenni/Huffmann/test.txt";
         int[] asciiCount = new int[128]; 
         ArrayList<Leaf> leaves = new ArrayList<>();
 
